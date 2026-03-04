@@ -1,7 +1,9 @@
 <!DOCTYPE html>
+
 <html lang="pt-br">
 
 <head>
+
 <meta charset="UTF-8">
 <title>CAEP OESTE</title>
 
@@ -24,123 +26,79 @@ text-align:center;
 header h1{
 margin:0;
 font-size:28px;
+letter-spacing:1px;
 }
 
 .banner img{
 width:100%;
 height:380px;
 object-fit:cover;
-margin-bottom:15px;
 }
 
 nav{
 display:flex;
 justify-content:center;
-gap:15px;
-background:#121212;
-padding:15px;
-box-shadow:0 2px 10px rgba(0,0,0,0.6);
+gap:10px;
+background:#151515;
+padding:12px;
 }
 
 nav button{
 background:#1f1f1f;
 color:white;
 border:none;
-padding:12px 22px;
+padding:10px 18px;
 cursor:pointer;
-border-radius:6px;
+border-radius:5px;
 font-weight:bold;
-transition:0.25s;
-letter-spacing:0.5px;
+transition:0.2s;
 }
 
 nav button:hover{
 background:#8b0000;
-transform:translateY(-2px);
-box-shadow:0 4px 10px rgba(0,0,0,0.6);
+}
+
+.container{
+max-width:1000px;
+margin:auto;
+padding:30px;
 }
 
 .tab{
 display:none;
-padding:35px;
-max-width:1100px;
-margin:auto;
-background:#111;
-border-radius:8px;
-box-shadow:0 0 20px rgba(0,0,0,0.6);
 }
 
-.active{
+.tab.active{
 display:block;
 }
 
 h2{
-border-left:5px solid #8b0000;
+border-left:4px solid #8b0000;
 padding-left:10px;
-margin-bottom:20px;
 }
 
 .galeria{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:15px;
 margin-top:20px;
 }
 
 .galeria img{
 width:100%;
-height:220px;
-object-fit:cover;
-border-radius:8px;
+border-radius:6px;
 transition:0.3s;
 }
 
-.galeria img{
-width:100%;
-height:230px;
-object-fit:cover;
-border-radius:8px;
-transition:0.35s;
-box-shadow:0 5px 15px rgba(0,0,0,0.6);
-}
-
 .galeria img:hover{
-transform:scale(1.06);
-box-shadow:0 10px 25px rgba(0,0,0,0.9);
-}
-
-
-table{
-width:100%;
-border-collapse:collapse;
-margin-top:20px;
-}
-
-th,td{
-padding:12px;
-border-bottom:1px solid #333;
-text-align:left;
-}
-
-th{
-background:#1a1a1a;
-}
-
-tr:hover{
-background:#141414;
+transform:scale(1.05);
 }
 
 footer{
-margin-top:60px;
-background:#0b0b0b;
-border-top:2px solid #8b0000;
-padding:40px 20px;
+background:#111;
 text-align:center;
-}
-
-footer .footer-container{
-max-width:1000px;
-margin:auto;
+padding:20px;
+margin-top:40px;
 }
 
 footer p{
@@ -149,72 +107,123 @@ font-size:14px;
 margin:8px 0;
 }
 
-.titulo-institucional{
-background:#0b0b0b;
-text-align:center;
-padding:25px 10px;
-border-bottom:2px solid #8b0000;
-}
-
-.titulo-institucional h1{
-margin:0;
-font-size:34px;
-letter-spacing:1px;
-}
-
-.titulo-institucional p{
-margin-top:8px;
-color:#cfcfcf;
-font-size:16px;
-letter-spacing:2px;
-}
-
-.banner{
-position:relative;
-width:100%;
-}
-
-.banner img{
-width:100%;
-height:380px;
-object-fit:cover;
-display:block;
-}
-
-.banner::after{
-content:"";
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:linear-gradient(
-to bottom,
-rgba(0,0,0,0.25),
-rgba(0,0,0,0.55)
-);
-}
-
-.tab{
-display:none;
-padding:35px;
-max-width:1100px;
-margin:auto;
-background:#111;
-border-radius:8px;
-box-shadow:0 0 20px rgba(0,0,0,0.6);
-opacity:0;
-transform:translateY(10px);
-transition:0.3s;
-}
-
-.tab.active{
-display:block;
-opacity:1;
-transform:translateY(0);
-}
-
 </style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Companhia de Ações Especiais de Polícia – CAEP OESTE</h1>
+
+</header>
+
+<div class="banner">
+
+<img src="CAEP-SITE/images/bannercaep.jpg">
+
+</div>
+
+<nav>
+
+<button onclick="abrirAba('historia')">História</button> <button onclick="abrirAba('objetivos')">Objetivos</button> <button onclick="abrirAba('operacoes')">Operações</button> <button onclick="abrirAba('galeria')">Galeria</button> <button onclick="abrirAba('hierarquia')">Hierarquia</button>
+
+</nav>
+
+<div class="container">
+
+<div id="historia" class="tab active">
+
+<h2>História</h2>
+
+<p>A Companhia de Ações Especiais de Polícia (CAEP) foi criada com o objetivo de reunir operadores com alto nível de preparo técnico, disciplina e capacidade de atuação em cenários operacionais de maior complexidade.</p>
+
+<p>Inspirada nas unidades especializadas da Polícia Militar do Estado de São Paulo, a companhia foi estruturada para atuar como força de apoio tático às equipes de policiamento convencional, reforçando a capacidade de resposta em ocorrências de maior risco.</p>
+
+<p>Com treinamento constante, organização estratégica e emprego tático disciplinado, a CAEP passou a desempenhar papel fundamental em operações que exigem controle de área, intervenção rápida e atuação coordenada.</p>
+
+<p>A unidade tornou-se referência em operações de saturação policial, patrulhamento tático especializado e apoio operacional, mantendo elevado padrão de preparo e atuação.</p>
+
+</div>
+
+<div id="objetivos" class="tab">
+
+<h2>Objetivos</h2>
+
+<p>• Garantir pronta resposta em ocorrências de maior complexidade.</p>
+
+<p>• Atuar no combate estratégico à criminalidade.</p>
+
+<p>• Apoiar unidades de patrulhamento convencional.</p>
+
+<p>• Executar operações de saturação policial.</p>
+
+<p>• Manter elevado padrão de treinamento e disciplina tática.</p>
+
+</div>
+
+<div id="operacoes" class="tab">
+
+<h2>Operações</h2>
+
+<p>A CAEP atua em diversas modalidades operacionais, aplicando planejamento estratégico e emprego tático das equipes.</p>
+
+<p>Entre as principais ações operacionais destacam-se:</p>
+
+<p>• Patrulhamento tático especializado.</p>
+
+<p>• Operações de saturação policial.</p>
+
+<p>• Apoio a unidades operacionais.</p>
+
+<p>• Intervenção em ocorrências críticas.</p>
+
+<p>• Presença estratégica em áreas de maior incidência criminal.</p>
+
+</div>
+
+<div id="galeria" class="tab">
+
+<h2>Galeria</h2>
+
+<div class="galeria">
+
+<img src="CAEP-SITE/images/bracal.jpg">
+<img src="CAEP-SITE/images/caepaoequip.jpg">
+<img src="CAEP-SITE/images/cursinho.jpg">
+<img src="CAEP-SITE/images/irmaoscaep.jpg">
+<img src="CAEP-SITE/images/lindaqsv.jpg">
+<img src="CAEP-SITE/images/maravilhaqsv.jpg">
+<img src="CAEP-SITE/images/noturno.jpg">
+<img src="CAEP-SITE/images/preprandocurso.jpg">
+<img src="CAEP-SITE/images/vtr.jpg">
+
+</div>
+
+</div>
+
+<div id="hierarquia" class="tab">
+
+<h2>Hierarquia</h2>
+
+<p>Comando da Companhia</p>
+<p>Subcomando Operacional</p>
+<p>Coordenação Tática</p>
+<p>Equipes Operacionais</p>
+<p>Operadores</p>
+
+</div>
+
+</div>
+
+<footer>
+
+<p>© 2026 Companhia de Ações Especiais de Polícia – CAEP OESTE</p>
+<p>Portal institucional desenvolvido para fins organizacionais dentro do ambiente RP.</p>
+<p><strong>Desenvolvimento do portal: Gabriel Sant</strong></p>
+
+</footer>
 
 <script>
 
@@ -222,8 +231,8 @@ function abrirAba(nome){
 
 let abas=document.querySelectorAll(".tab")
 
-abas.forEach(a=>{
-a.classList.remove("active")
+abas.forEach(aba=>{
+aba.classList.remove("active")
 })
 
 document.getElementById(nome).classList.add("active")
@@ -231,271 +240,6 @@ document.getElementById(nome).classList.add("active")
 }
 
 </script>
-
-</head>
-
-<body>
-
-<div class="titulo-institucional">
-
-<h1>Companhia de Ações Especiais de Polícia</h1>
-
-<p>DISCIPLINA • ESTRATÉGIA • PRONTA RESPOSTA</p>
-
-</div>
-
-<div class="banner">
-<img src="images/bannercaep.jpg">
-</div>
-
-<nav>
-
-
-<button onclick="abrirAba('historia')">História</button>
-<button onclick="abrirAba('objetivos')">Objetivos</button>
-<button onclick="abrirAba('operacoes')">Operações</button>
-<button onclick="abrirAba('galeria')">Galeria</button>
-<button onclick="abrirAba('hierarquia')">Hierarquia</button>
-
-</nav>
-
-
-<!-- ABA: HISTÓRIA (somente) -->
-<div id="historia" class="tab active">
-
-  <h2>História</h2>
-
-  <h3>Formação e Contexto Operacional</h3>
-  <p>
-    A Companhia de Ações Especiais de Polícia (CAEP) foi estruturada a partir da necessidade de ampliar a capacidade de resposta operacional em ocorrências de maior complexidade, com ênfase no emprego tático, disciplina de tropa e pronta-resposta. A evolução do cenário criminal, marcada por maior organização logística de grupos criminosos, emprego de armamento de maior potencial ofensivo e aumento de ocorrências críticas em áreas urbanas, demandou a implementação de equipes com preparo técnico diferenciado e doutrina operacional específica.
-  </p>
-
-  <p>
-    A CAEP foi concebida para atuar como força de apoio especializado ao policiamento ostensivo convencional, mantendo integração direta com a cadeia de comando e com as demais frações operacionais. Sua estrutura e emprego seguem princípios compatíveis com o modelo de atuação de unidades especializadas da Polícia Militar do Estado de São Paulo, com foco em mobilidade, padronização de procedimentos, eficiência na tomada de decisão e capacidade de atuação em cenários de risco elevado.
-  </p>
-
-  <h3>Organização e Doutrina</h3>
-  <p>
-    A unidade foi organizada com base em princípios de hierarquia, disciplina e profissionalismo, adotando procedimentos operacionais padronizados e métodos de planejamento compatíveis com operações táticas urbanas. O emprego da CAEP prioriza ações com superioridade técnica, preservação da vida e controle de risco, observando a legalidade e a proporcionalidade no uso da força.
-  </p>
-
-  <p>
-    A estrutura de funcionamento contempla comando responsável pelo direcionamento estratégico e coordenação do emprego operacional, além de setores internos voltados à gestão do efetivo, planejamento de missões, levantamento de informações operacionais e suporte logístico. Essa organização permite que a companhia mantenha capacidade de mobilização rápida, sustentação de operações e continuidade do serviço com padrão elevado.
-  </p>
-
-  <h3>Seleção e Capacitação</h3>
-  <p>
-    O ingresso na CAEP exige avaliação interna e critérios de aptidão compatíveis com o nível de exigência da atividade. O processo busca selecionar policiais com perfil operacional adequado, considerando condicionamento físico, controle emocional, disciplina, histórico funcional e capacidade de atuação em equipe. Após a seleção, o efetivo passa por ciclos de capacitação e treinamento continuado, garantindo atualização constante e manutenção do padrão técnico.
-  </p>
-
-  <p>
-    Os treinamentos envolvem técnicas de abordagem policial, progressão tática em ambiente urbano, tiro operacional, condução e posicionamento de viaturas, procedimentos de alto risco e gerenciamento de ocorrências críticas. A capacitação contínua reforça a padronização e a interoperabilidade com outras frações, elevando a eficiência e a segurança durante as missões.
-  </p>
-
-  <h3>Consolidação Institucional</h3>
-  <p>
-    Ao longo de sua evolução, a CAEP consolidou-se como fração estratégica no suporte ao policiamento ostensivo, destacando-se pela disciplina de tropa, padronização, presença qualificada e capacidade de atuação em ocorrências críticas. A companhia representa o compromisso permanente com a manutenção da ordem pública, proteção da sociedade e fortalecimento do policiamento ostensivo por meio de atuação técnica, organizada e orientada por resultados.
-  </p>
-
-</div>
-
-<!-- ABA: OBJETIVOS -->
-<div id="objetivos" class="tab">
-
-<h2>Objetivos</h2>
-
-<p>
-A Companhia de Ações Especiais de Polícia (CAEP) tem como objetivo principal atuar de forma estratégica no apoio às unidades operacionais, oferecendo capacidade tática diferenciada para o enfrentamento de ocorrências de média e alta complexidade. A unidade busca ampliar a eficiência do policiamento ostensivo por meio de equipes preparadas para atuar em cenários que exigem maior organização operacional, disciplina tática e rapidez de resposta.
-</p>
-
-<p>
-Entre os principais objetivos institucionais da CAEP está o fortalecimento da presença policial em áreas com maior incidência criminal, contribuindo diretamente para a preservação da ordem pública, redução de índices criminais e aumento da sensação de segurança da população.
-</p>
-
-<h3>Apoio Operacional</h3>
-
-<p>
-A CAEP tem como objetivo prestar apoio às unidades territoriais sempre que a complexidade da ocorrência exigir reforço tático ou maior capacidade de mobilização. Essa atuação permite que equipes especializadas auxiliem no controle de situações críticas, garantindo maior segurança tanto para os policiais quanto para a sociedade.
-</p>
-
-<h3>Prevenção e Combate à Criminalidade</h3>
-
-<p>
-Outro objetivo fundamental da companhia é atuar de forma preventiva e repressiva no combate à criminalidade. Por meio de patrulhamento tático, operações de saturação e presença estratégica em áreas de risco, a unidade contribui para inibir ações criminosas e reduzir a atuação de grupos envolvidos em atividades ilícitas.
-</p>
-
-<h3>Atuação em Ocorrências de Maior Complexidade</h3>
-
-<p>
-A CAEP também tem como objetivo atuar em ocorrências que exigem maior preparo técnico e organização operacional, como abordagens de alto risco, apoio em operações policiais planejadas, cumprimento de mandados judiciais e ações integradas com outras unidades especializadas.
-</p>
-
-<h3>Integração com Outras Unidades</h3>
-
-<p>
-A companhia busca manter integração constante com outras unidades operacionais da corporação, atuando de forma coordenada em operações conjuntas. Essa integração fortalece a capacidade de resposta policial e garante maior eficiência no emprego do efetivo em diferentes cenários operacionais.
-</p>
-
-<h3>Desenvolvimento e Aperfeiçoamento Operacional</h3>
-
-<p>
-A manutenção de elevado nível de preparo técnico também faz parte dos objetivos da CAEP. A unidade incentiva a capacitação contínua de seus integrantes por meio de treinamentos, instruções e aperfeiçoamento constante de técnicas operacionais, garantindo que as equipes estejam sempre preparadas para atuar em situações críticas.
-</p>
-
-<p>
-Dessa forma, a Companhia de Ações Especiais de Polícia busca consolidar-se como uma fração operacional estratégica dentro da estrutura policial, contribuindo diretamente para o fortalecimento da segurança pública e para a eficiência das ações de policiamento ostensivo.
-</p>
-
-</div>
-
-
-<!-- ABA: OPERAÇÕES -->
-<div id="operacoes" class="tab">
-
-<h2>Operações</h2>
-
-<p>
-A Companhia de Ações Especiais de Polícia (CAEP) realiza operações voltadas ao enfrentamento da criminalidade e ao apoio direto às unidades de policiamento ostensivo. Por possuir equipes com preparo técnico diferenciado e doutrina operacional voltada para situações críticas, a companhia é empregada principalmente em cenários que exigem maior organização tática, mobilização de efetivo e rapidez de resposta.
-</p>
-
-<p>
-As operações desenvolvidas pela CAEP são planejadas com base em análise operacional, levantamento de informações e avaliação do cenário de risco, garantindo que o emprego da unidade ocorra de forma estratégica e eficiente.
-</p>
-
-<h3>Operações de Saturação</h3>
-
-<p>
-As operações de saturação consistem no emprego intensivo de equipes policiais em determinadas regiões com maior incidência de criminalidade. O objetivo é ampliar a presença policial, realizar abordagens preventivas, fiscalizar veículos e indivíduos suspeitos e aumentar a sensação de segurança da população.
-</p>
-
-<h3>Operações de Bloqueio e Fiscalização</h3>
-
-<p>
-Essas operações são realizadas em pontos estratégicos da cidade com o objetivo de fiscalizar veículos, verificar documentação, identificar indivíduos procurados pela justiça e localizar armas ou outros materiais ilícitos. A atuação em bloqueios operacionais contribui para a prevenção de crimes e para o controle de circulação em áreas críticas.
-</p>
-
-<h3>Patrulhamento Tático Especializado</h3>
-
-<p>
-O patrulhamento tático é realizado por equipes treinadas para atuar em áreas com maior risco operacional. Essas equipes realizam rondas estratégicas, monitoramento de locais sensíveis e abordagens policiais com técnicas operacionais específicas, garantindo maior controle e presença policial qualificada.
-</p>
-
-<h3>Operações de Cerco e Contenção</h3>
-
-<p>
-Em situações de fuga de suspeitos ou localização de indivíduos envolvidos em crimes, a CAEP pode atuar em operações de cerco e contenção. Nessas ações, as equipes organizam bloqueios táticos, controle de rotas de fuga e buscas em áreas determinadas para localizar e deter os envolvidos.
-</p>
-
-<h3>Operações Conjuntas</h3>
-
-<p>
-A companhia também participa de operações integradas com outras unidades operacionais da corporação, como Força Tática, ROCAM e outras frações especializadas. A atuação conjunta permite ampliar o efetivo empregado e fortalecer a capacidade de resposta policial em operações de maior porte.
-</p>
-
-<h3>Operações Preventivas</h3>
-
-<p>
-Além das ações repressivas, a CAEP também desenvolve operações preventivas voltadas à presença estratégica em locais de grande circulação de pessoas, eventos e áreas com histórico de ocorrências. Essa atuação preventiva contribui para reduzir oportunidades de crime e aumentar a segurança da população.
-</p>
-
-<p>
-Por meio dessas operações, a Companhia de Ações Especiais de Polícia mantém atuação constante no apoio ao policiamento ostensivo, reforçando a presença policial e contribuindo diretamente para a preservação da ordem pública.
-</p>
-
-</div>
-
-<div id="galeria" class="tab">
-
-<h2>Galeria Operacional</h2>
-
-<div class="galeria">
-
-<img src="images/bracal.jpeg">
-<img src="images/caepaoequip.jpeg">
-<img src="images/cursiinho.jpeg">
-<img src="images/irmaoscaep.jpeg">
-<img src="images/lindaqsv.jpeg">
-<img src="images/maravilhaqsv.jpeg">
-<img src="images/noturno.jpeg">
-<img src="images/preprandocurso.jpeg">
-<img src="images/vtr.jpeg">
-
-</div>
-
-</div>
-
-
-<div id="hierarquia" class="tab">
-
-<h2>Hierarquia</h2>
-
-<table>
-
-<tr>
-<th>Nome</th>
-<th>Patente</th>
-</tr>
-
-<tr><td>Maxwell Araujo</td><td>Capitão</td></tr>
-
-<tr><td>Paulo Guerra</td><td>1º Tenente</td></tr>
-
-<tr><td>Jhon Connor</td><td>2º Tenente</td></tr>
-<tr><td>Vinicius Pontel</td><td>2º Tenente</td></tr>
-<tr><td>Juliano Soares</td><td>2º Tenente</td></tr>
-
-<tr><td>Filipe Hoffmann</td><td>Aspirante a Oficial</td></tr>
-
-<tr><td>Jotav Cavalcanti</td><td>1º Sargento</td></tr>
-<tr><td>João Leal</td><td>1º Sargento</td></tr>
-<tr><td>Dante Barbosa</td><td>1º Sargento</td></tr>
-<tr><td>Pedro Saldanha</td><td>1º Sargento</td></tr>
-
-<tr><td>Davi Silva</td><td>2º Sargento</td></tr>
-<tr><td>André Mathias</td><td>2º Sargento</td></tr>
-<tr><td>Paulo Estevam</td><td>2º Sargento</td></tr>
-<tr><td>Gabriel Junior</td><td>2º Sargento</td></tr>
-<tr><td>Gustavo Rodrigues</td><td>2º Sargento</td></tr>
-<tr><td>Gabriel Sant</td><td>2º Sargento</td></tr>
-
-<tr><td>Arthur Gama</td><td>3º Sargento</td></tr>
-<tr><td>Silveira Junior</td><td>3º Sargento</td></tr>
-<tr><td>João Guerra</td><td>3º Sargento</td></tr>
-<tr><td>Eddy Falcon</td><td>3º Sargento</td></tr>
-<tr><td>Rony Vieira</td><td>3º Sargento</td></tr>
-<tr><td>Everton Nascimento</td><td>3º Sargento</td></tr>
-
-<tr><td>Luiz Ricardo</td><td>Cabo</td></tr>
-<tr><td>Vitor Aguiar</td><td>Cabo</td></tr>
-<tr><td>Fernanda Prado</td><td>Cabo</td></tr>
-<tr><td>Guilherme Silva</td><td>Cabo</td></tr>
-<tr><td>Giovanni Dutra</td><td>Cabo</td></tr>
-<tr><td>David Prestes</td><td>Cabo</td></tr>
-<tr><td>João Almeida</td><td>Cabo</td></tr>
-<tr><td>Matheus Santana</td><td>Cabo</td></tr>
-<tr><td>Jotta Manel</td><td>Cabo</td></tr>
-<tr><td>Bryan Falcon</td><td>Cabo</td></tr>
-<tr><td>Johnny Guerra</td><td>Cabo</td></tr>
-<tr><td>Bastião Carreiro</td><td>Cabo</td></tr>
-
-</table>
-
-</div>
-
-<footer>
-
-<div class="footer-container">
-
-<p>© 2026 Companhia de Ações Especiais de Polícia – CAEP OESTE</p>
-
-<p>Portal institucional desenvolvido para fins organizacionais dentro do ambiente RP.</p>
-
-<p><strong>Desenvolvimento do portal: Gabriel Sant</strong></p>
-
-</div>
-
-</footer>
-
 
 </body>
 </html>
